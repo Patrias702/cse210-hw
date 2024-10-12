@@ -33,7 +33,7 @@ class Product
     }
 }
 
-// Class to represent a Customer
+
 class Customer
 {
     private string _name;

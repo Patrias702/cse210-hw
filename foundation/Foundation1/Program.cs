@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-// Class to represent a Comment
+
 class Comment
 {
     public string Name { get; set; }
@@ -19,12 +19,11 @@ class Comment
     }
 }
 
-// Class to represent a Video
 class Video
 {
     public string Title { get; set; }
     public string Author { get; set; }
-    public int Length { get; set; } // Length in seconds
+    public int Length { get; set; } 
     public List<Comment> Comments { get; private set; }
 
     public Video(string title, string author, int length)
@@ -60,35 +59,35 @@ class Video
     }
 }
 
-// Main Program class
+
 class Program
 {
     static void Main(string[] args)
     {
-        // Creating videos
+        
         Video video1 = new Video("C# Tutorial", "Tech Guy", 600);
         Video video2 = new Video("Learning ASP.NET", "Code Academy", 900);
         Video video3 = new Video("OOP Concepts", "Programming Guru", 720);
 
-        // Adding comments to video1
+       
         video1.AddComment(new Comment("John", "Great tutorial!"));
         video1.AddComment(new Comment("Sarah", "Very informative."));
         video1.AddComment(new Comment("Mike", "Loved the explanation."));
 
-        // Adding comments to video2
+        
         video2.AddComment(new Comment("Anna", "Thanks for the clear explanation."));
         video2.AddComment(new Comment("Tom", "This helped me a lot!"));
         video2.AddComment(new Comment("Kate", "Good content!"));
 
-        // Adding comments to video3
+        
         video3.AddComment(new Comment("Leo", "Perfect intro to OOP."));
         video3.AddComment(new Comment("Sophia", "Just what I needed."));
         video3.AddComment(new Comment("David", "Super helpful, thanks!"));
 
-        // Creating a list of videos
+        
         List<Video> videos = new List<Video> { video1, video2, video3 };
 
-        // Iterating through the list of videos and displaying info
+        
         foreach (var video in videos)
         {
             video.DisplayVideoInfo();
